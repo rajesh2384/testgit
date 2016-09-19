@@ -20,8 +20,8 @@ $(ODIR)/%.o: %.c $(DEPS)
 hellomake: $(OBJ)
 	gcc -o $@ $^ $(CFLAGS) $(LIBS)
 
-		.PHONY: clean
+.PHONY: clean
 
-		clean:
-			rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
+clean:
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
 
